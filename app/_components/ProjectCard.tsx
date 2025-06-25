@@ -29,13 +29,15 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
       transition={{ duration: 0.5, delay: 0.25 }}
       className="bg-[#F3F4F3] dark:bg-dark-200 rounded-lg p-4 sm:p-8 space-y-8"
     >
-      <Link href={`/work/${id}`} className="rounded-lg overflow-hidden block">
+      <Link
+        href={`/work/${id}`}
+        className="relative block rounded-lg overflow-hidden aspect-[4/3]"
+      >
         <Image
           src={imageUrl}
-          width={1000}
-          height={1000}
           alt={heading}
-          className="hover:scale-110 transition-transform duration-700"
+          fill
+          className="object-cover hover:scale-110 transition-transform duration-700"
         />
       </Link>
       <div>

@@ -41,6 +41,20 @@ export const techCardsItems = [
     description: "Backend",
     imageUrl: "/imgs/logos/node-js.svg",
     bgColor: "bg-[#689F63]/30",
+  },
+
+  {
+    name: "HTML5",
+    description: "Structuring and presenting",
+    imageUrl: "/imgs/logos/html5.svg",
+    bgColor: "bg-[#E34C26]/30",
+  },
+
+  {
+    name: "CSS3",
+    description: "Styling",
+    imageUrl: "/imgs/logos/css3.svg",
+    bgColor: "bg-[#2965F1]/30",
   }
 ];
 
@@ -64,23 +78,20 @@ export const portfolioProjects = [
     sourceCodeUrl: "",
   },
   {
-    id: "exptracker",
-    heading: "ExpenseTracker",
-    subheading: "application for tracking your incomes and expenses.",
+    id: "showwithredux",
+    heading: "ShopWithRedux",
+    subheading: "react + redux shop with multiple additions and total billing.",
     description:
-      "Track your incomes and expenses in an easy way. Clear chart overviews will improve your organization. The application is developed with react + typescript for frontend part, and nodejs with mongodb.",
+      "A modern web store built with React, Next.js, and the Redux Toolkit — with support for multiple item additions, total calculation, and checkout.",
     imageUrl: "/imgs/projects/portfolio-mockup4.png",
     techStack: [
-      "TypeScript",
       "React",
-      "NodeJS",
-      "MongoDB",
-      "ExpressJS",
+      "NextJS",
+      "Redux",
       "TailwindCSS",
-      "shadcn/ui",
     ],
     liveDemoUrl: "",
-    sourceCodeUrl: "",
+    sourceCodeUrl: "https://github.com/macak410/Shopping-cart-with-Redux",
   },
   {
     id: "socialsphere",
