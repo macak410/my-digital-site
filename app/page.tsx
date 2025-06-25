@@ -1,14 +1,36 @@
-export default function Home() {
+import {
+  BriefcaseBusiness,
+  Contact as ContactIco,
+  House,
+  UserRound,
+} from "lucide-react";
+import { Navbar } from "@/app/_components/ui/Navbar";
+import HeroSection from "@/app/_components/HeroSection";
+import Skills from "@/app/_components/Skills";
+import ProjectsSection from "@/app/_components/ProjectsSection";
+import Testimonials from "@/app/_components/Testimonials";
+import Footer from "@/app/_components/Footer";
+
+const navItems = [
+  { name: "Home", link: "#home", icon: <House /> },
+  { name: "Work", link: "#work", icon: <BriefcaseBusiness /> },
+  { name: "About", link: "#about", icon: <UserRound /> },
+  { name: "Contact", link: "#contact", icon: <ContactIco /> },
+];
+
+const Homepage = () => {
   return (
-    <main className="flex items-center justify-center min-h-screen bg-dark-100 text-white">
-      <h1 className="text-3xl font-bold animate-shimmer">Tomislav Portfolio ✨</h1>
-      <div className="bg-grid-blue-400 h-64 w-full" />
-      <p className="text-[var(--primary-DEFAULT)] text-xl">
-        Koristim boju iz Tailwind varijable!
-      </p>
-      <div className="bg-white dark:bg-dark-100 text-black dark:text-white p-4 rounded">
-        Osvijetljena tema vs tamna tema
+    <main className="flex flex-col px-5 sm:px-10 relative">
+      <div className="max-w-7xl mx-auto w-full">
+        <Navbar navItems={navItems} />
+        <HeroSection />
+        <Skills />
+        <ProjectsSection />
+        {/* <Testimonials /> */}
+        <Footer />
       </div>
     </main>
   );
-}
+};
+
+export default Homepage;

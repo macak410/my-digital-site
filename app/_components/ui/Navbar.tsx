@@ -1,10 +1,10 @@
 "use client";
 import { cn } from "@/app/_lib/utils";
-import { 
+import {
   AnimatePresence,
   motion,
   useMotionValueEvent,
-  useScroll
+  useScroll,
 } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
@@ -27,7 +27,7 @@ export const Navbar = ({
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
-        let direction = current! - scrollYProgress.getPrevious()!;
+      let direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
         setVisible(true);
