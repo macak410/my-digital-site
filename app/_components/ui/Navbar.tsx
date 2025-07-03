@@ -7,7 +7,9 @@ import {
   useScroll,
 } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { ThemeToggle } from "@/app/_components/ThemeToggle";
 
 export const Navbar = ({
   navItems,
@@ -21,58 +23,57 @@ export const Navbar = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(true);
+  const pathname = usePathname();
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
+      const direction = current - scrollYProgress.getPrevious()!;
       if (scrollYProgress.get() < 0.05) {
         setVisible(true);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        setVisible(direction < 0);
       }
     }
   });
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
-        className={cn(
-          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-dark-700 rounded-lg bg-dark-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-8 py-4  items-center justify-center space-x-4",
-          className
-        )}
-      >
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative text-neutral-50 items-center flex space-x-1 hover:text-neutral-300"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block font-medium">{navItem.name}</span>
-          </Link>
-        ))}
-      </motion.div>
+      <div className="fixed top-10 inset-x-0 mx-auto w-max z-[5000]">
+        <motion.div
+          initial={{ opacity: 1, y: -100 }}
+          animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
+          transition={{ duration: 0.2 }}
+          className={cn(
+            "flex items-center gap-4 px-8 py-4 rounded-xl border shadow-md backdrop-blur-md transition-colors duration-300",
+            "bg-white/80 border-neutral-300 text-neutral-800 dark:bg-dark-200/80 dark:border-dark-700 dark:text-neutral-100",
+            className
+          )}
+        >
+          {navItems.map((navItem, idx) => {
+            const isActive = pathname === navItem.link;
+
+            return (
+              <Link
+                key={`link=${idx}`}
+                href={navItem.link}
+                className={cn(
+                  "relative flex items-center gap-2 px-2 py-1.5 text-base font-medium rounded-md transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500",
+                  isActive
+                    ? "text-blue-600 dark:text-blue-400 underline underline-offset-4 decoration-blue-500"
+                    : "text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-white"
+                )}
+              >
+                <span className="block sm:hidden">{navItem.icon}</span>
+                <span className="hidden sm:block">{navItem.name}</span>
+              </Link>
+            );
+          })}
+
+          {/* Theme toggle unutar navigacije */}
+          <ThemeToggle />
+        </motion.div>
+      </div>
     </AnimatePresence>
   );
 };

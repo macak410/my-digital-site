@@ -90,7 +90,7 @@ export const portfolioProjects = [
       "Redux",
       "TailwindCSS",
     ],
-    liveDemoUrl: "",
+    liveDemoUrl: "https://shopping-cart-with-redux-xi.vercel.app/",
     sourceCodeUrl: "https://github.com/macak410/Shopping-cart-with-Redux",
   },
   {
