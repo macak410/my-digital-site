@@ -26,7 +26,15 @@ const HeroSection = () => {
         {/* 👇 Slika + pozdrav + status */}
         <div className="flex flex-col sm:flex-row items-center gap-6 mb-10 -mt-20">
           {/* Slika */}
-          <div className="slika w-28 h-28 relative rounded-full overflow-hidden shadow-md">
+          <div
+            className="slika w-28 h-28 relative rounded-full overflow-hidden border-4 
+            border-stone-400 
+            dark:border-stone-700 
+            shadow-[0_0_6px_8px_rgba(120,120,120,0.2)] 
+            dark:shadow-[0_0_6px_8px_rgba(120,120,120,0.2)] transition-all duration-300 
+            hover:shadow-[0_0_20px_10px_rgba(120,120,120,0.5)] 
+            dark:hover:shadow-[0_0_20px_8px_rgba(120,120,120,0.5)]"
+          >
             <Image
               src="/imgs/avatars/tomislav.jpg"
               alt="Tomislav Avatar"
@@ -38,11 +46,12 @@ const HeroSection = () => {
           {/* Tekst i status */}
           <div className="tekst flex flex-col items-center sm:items-start text-center sm:text-left">
             <h2 className="text-2xl font-semibold mb-3">
-              Hey, I&apos;m Tomislav <span className="wave-hover text-3xl">👋</span>
+              Hey, I&apos;m Tomislav <span className="wave-hover text-3xl align-middle">👋</span>
             </h2>
 
             <a
               href="mailto:macak410@gmail.com"
+              aria-label="Contact Tomislav via email"
               className="flex items-center gap-3 group"
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
@@ -51,33 +60,35 @@ const HeroSection = () => {
               <div className="green-dot w-3 h-3 rounded-full bg-green-500" />
 
               {/* Tekst s hover efektom */}
-             <div className="relative cursor-pointer overflow-hidden h-7 min-w-[160px] flex items-center">
-              <AnimatePresence mode="wait">
-                {!hovered ? (
-                  <motion.span
-                    key="available"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute left-0 flex items-center gap-1 text-gray-500 font-medium h-full text-lg"
-                  >
-                    Available for work
-                  </motion.span>
-                ) : (
-                  <motion.span
-                    key="reach"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3 }}
-                    className="aabsolute left-0 flex items-center gap-1 text-gray-500 font-medium h-full text-lg"
-                  >
-                    Reach out <Mail className="w-4 h-4 ml-1" />
-                  </motion.span>
-                )}
-              </AnimatePresence>
-            </div>
+             <div className="relative overflow-hidden h-7 min-w-[160px]">
+                <div className="relative w-full h-full">
+                  <AnimatePresence mode="wait">
+                    {!hovered ? (
+                      <motion.span
+                        key="available"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                        className="absolute left-0 top-0 w-full flex items-center gap-1 text-gray-500 font-medium text-lg will-change-transform"
+                      >
+                        Available for work
+                      </motion.span>
+                    ) : (
+                      <motion.span
+                        key="reach"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 20 }}
+                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                        className="absolute left-0 top-0 w-full flex items-center gap-1 text-gray-500 font-medium text-lg will-change-transform"
+                      >
+                        Reach out <Mail className="w-4 h-4 ml-1" />
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </div>
             </a>
           </div>
         </div>
