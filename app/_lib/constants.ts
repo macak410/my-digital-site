@@ -112,12 +112,12 @@ export const portfolioProjects = [
     sourceCodeUrl: "",
   },
   {
-    id: "nextcut",
-    heading: "NextCut",
+    id: "sisajme",
+    heading: "ŠišajMe",
     subheading: "a fresh cut in a few clicks",
     description:
       "A responsive web application designed to schedule and manage barber appointments. Potentional customers can create their account and schedule a new haircut. There is clearly defined period of time that is awailable for bookings. Admin have information about all appointments on dashboard page, and he is able to manage them in few clicks.",
-    imageUrl: "/imgs/projects/portfolio-mockup3.jpg",
+    imageUrl: "/imgs/projects/portfolio-mockup3.webp",
     techStack: [
       "TypeScript",
       "NextJS",
@@ -125,8 +125,8 @@ export const portfolioProjects = [
       "TailwindCSS",
       "Advanced forms",
     ],
-    liveDemoUrl: "",
-    sourceCodeUrl: "",
+    liveDemoUrl: "https://sisajme-app.vercel.app",
+    sourceCodeUrl: "https://github.com/macak410/sisajMe-app",
   },
 ];
 

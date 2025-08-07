@@ -23,7 +23,7 @@ const HeroSection = () => {
         className="pb-20 pt-36 sm:p-0 sm:min-h-screen flex flex-col items-center justify-center relative"
         id="#home"
       >
-        {/* 👇 Slika + pozdrav + status */}
+        {/* Slika + pozdrav + status */}
         <div className="flex flex-col sm:flex-row items-center gap-6 mb-10 -mt-20">
           {/* Slika */}
           <div
@@ -93,7 +93,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* 👇 Glavni sadržaj hero sekcije */}
+        {/* Glavni sadržaj hero sekcije */}
         <div className="flex flex-col justify-center items-center relative z-10 text-center">
           <p className="uppercase font-bold text-sm tracking-widest flex items-center gap-1">
             <MapPin className="w-4 h-4 text-primary" />
