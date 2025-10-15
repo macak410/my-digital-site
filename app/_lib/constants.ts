@@ -133,13 +133,13 @@ export const portfolioProjects = [
 export const tooltipItems = [
   {
     id: 1,
-    name: "Bogdan Aleksic",
+    name: "Tony Stark",
     designation: "Great job!",
     image: "/imgs/avatars/bogdan.svg",
   },
   {
     id: 2,
-    name: "Djordje Djurovic",
+    name: "Marko Tomić",
     designation: "Incredibly responsible",
     image: "/imgs/avatars/djordje.jpeg",
   },
@@ -164,16 +164,16 @@ export const testimonialItems = [
     name: "Alex Finn",
     proffesion: "Lead Web Designer at knots.io",
     description:
-      "“Working with Andrija was a very smooth experience from start to finish.  He not only brings strong technical skills to front-end development, but his attention to detail and commitment to delivering pixel-perfect  designs made a huge difference in our project. He is enthusiastic in  suggesting improvements. Always ready to answer questions or provide  updates. If you're looking for a reliable developer who brings  creativity and efficiency to the table, Andrija is the right person!”",
+      "“Working with Tomislav was a very smooth experience from start to finish.  He not only brings strong technical skills to front-end development, but his attention to detail and commitment to delivering pixel-perfect  designs made a huge difference in our project. He is enthusiastic in  suggesting improvements. Always ready to answer questions or provide  updates. If you're looking for a reliable developer who brings  creativity and efficiency to the table, Andrija is the right person!”",
     image: "/imgs/avatars/Alex.jpg",
   },
   {
     id: 2,
     stars: 5,
-    name: "Djordje Djurovic",
-    proffesion: "CEO at DigitalityLab",
+    name: "Marko Tomić",
+    proffesion: "CEO at LabDigital",
     description:
-      "“Andrija is an outstanding frontend specialist and presents consistently high level of work. During our work together, he has demonstrated extraordinary skills in simplifying complex ideas into clean, functional, and visually appealing designs. His communication is to the point and time management is perfect, even for the most pressing deadlines. I would highly recommend him to any company looking to bring on a frontend developer with strong technical skills and an keen eye for design.”",
+      "Tomislav is an outstanding frontend specialist and presents consistently high level of work. During our work together, he has demonstrated extraordinary skills in simplifying complex ideas into clean, functional, and visually appealing designs. His communication is to the point and time management is perfect, even for the most pressing deadlines. I would highly recommend him to any company looking to bring on a frontend developer with strong technical skills and an keen eye for design.”",
     image: "/imgs/avatars/djordje.jpeg",
   },
   {
@@ -182,16 +182,16 @@ export const testimonialItems = [
     name: "Anthony Sean",
     proffesion: "Chief Technology Officer at DealJet",
     description:
-      "“On several occasions, I have had the privilege to work with Andrija, and he has never failed to impress. While he possesses a great level of knowledge in frontend development, what I find most remarkable about him is his obsession with getting every detail right in order to achieve perfection in the end-user experience. He always pays attention to the project requirements, raises up some pertinent issues, and most importantly delivers beyond the call of duty. Andrija is the kind of person who adds value to the team he's in!”",
+      "“On several occasions, I have had the privilege to work with Tomislav, and he has never failed to impress. While he possesses a great level of knowledge in frontend development, what I find most remarkable about him is his obsession with getting every detail right in order to achieve perfection in the end-user experience. He always pays attention to the project requirements, raises up some pertinent issues, and most importantly delivers beyond the call of duty. Andrija is the kind of person who adds value to the team he's in!”",
     image: "/imgs/avatars/Anthony.jpg",
   },
   {
     id: 4,
     stars: 5,
-    name: "Bogdan Aleksic",
+    name: "Tony Stark",
     proffesion: "Investment Educator and Crypto Expert",
     description:
-      "“I got on board Andrija from Upwork to help me develop a website for my course on blockchain, cryptocurrency, and investment techniques. Because of his effort, I was able to generate considerable sales from my course after launching it, and I have received good reviews about the design and functionality of the website. Andrija is someone I would highly recommend!”",
+      "“I got on board Tomislav from Upwork to help me develop a website for my course on blockchain, cryptocurrency, and investment techniques. Because of his effort, I was able to generate considerable sales from my course after launching it, and I have received good reviews about the design and functionality of the website. Andrija is someone I would highly recommend!”",
     image: "/imgs/avatars/bogdan.svg",
   },
 ];
