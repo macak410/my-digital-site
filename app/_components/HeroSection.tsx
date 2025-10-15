@@ -15,16 +15,18 @@ const HeroSection = () => {
 
   return (
     <>
+      {/* Background grid */}
       <div className="h-screen w-full dark:bg-dark-100 bg-white dark:bg-grid-white/[0.04] bg-grid-black/[0.06] flex items-center justify-center absolute top-0 left-0">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-dark-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
       <div
-        className="pb-20 pt-36 sm:p-0 sm:min-h-screen flex flex-col items-center justify-center relative"
+        // 👇 mobile = pt-32, desktop = pt-40
+        className="pb-0 pt-32 sm:pt-40 sm:min-h-screen flex flex-col items-center justify-center relative"
         id="#home"
       >
         {/* Slika + pozdrav + status */}
-        <div className="flex flex-col sm:flex-row items-center gap-6 mb-10 -mt-20">
+        <div className="flex flex-col sm:flex-row items-center gap-6 mb-10 sm:-mt-20">
           {/* Slika */}
           <div
             className="slika w-28 h-28 relative rounded-full overflow-hidden border-4 
@@ -60,7 +62,7 @@ const HeroSection = () => {
               <div className="green-dot w-3 h-3 rounded-full bg-green-500" />
 
               {/* Tekst s hover efektom */}
-             <div className="relative overflow-hidden h-7 min-w-[160px]">
+              <div className="relative overflow-hidden h-7 min-w-[160px]">
                 <div className="relative w-full h-full">
                   <AnimatePresence mode="wait">
                     {!hovered ? (

@@ -39,13 +39,13 @@ export const Navbar = ({
 
   return (
     <AnimatePresence mode="wait">
-      <div className="fixed top-10 inset-x-0 mx-auto w-max z-[5000]">
+      <div className="fixed top-2 sm:top-10 inset-x-0 mx-auto w-max z-[5000] mb-4 sm:mb-0">
         <motion.div
           initial={{ opacity: 1, y: -100 }}
           animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
           transition={{ duration: 0.2 }}
           className={cn(
-            "flex items-center gap-4 px-8 py-4 rounded-xl border shadow-md backdrop-blur-md transition-colors duration-300",
+            "flex items-center gap-2 sm:gap-4 px-4 sm:px-8 py-2 sm:py-4 rounded-xl border shadow-md backdrop-blur-md transition-colors duration-300",
             "bg-white/80 border-neutral-300 text-neutral-800 dark:bg-dark-200/80 dark:border-dark-700 dark:text-neutral-100",
             className
           )}
@@ -58,7 +58,8 @@ export const Navbar = ({
                 key={`link=${idx}`}
                 href={navItem.link}
                 className={cn(
-                  "relative flex items-center gap-2 px-2 py-1.5 text-base font-medium rounded-md transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500",
+                  "relative flex items-center gap-1 sm:gap-2 px-1.5 sm:px-2 py-1 text-sm sm:text-base font-medium rounded-md transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500",
+                  "whitespace-nowrap",
                   isActive
                     ? "text-blue-600 dark:text-blue-400 underline underline-offset-4 decoration-blue-500"
                     : "text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-white"
